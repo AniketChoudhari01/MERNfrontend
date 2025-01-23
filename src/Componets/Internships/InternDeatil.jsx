@@ -26,7 +26,7 @@ function InternDeatil() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://internshipbackend-vwja.onrender.com/api/internship/${id}`
+        `https://intern-area-backned.onrender.com/api/internship/${id}`
       );
       setData(response.data);
 
@@ -52,7 +52,7 @@ function InternDeatil() {
 
       await axios
         .post(
-          "https://internshipbackend-vwja.onrender.com/api/application",
+          "https://intern-area-backned.onrender.com/api/application",
           bodyJson
         )
         .then((res) => {})
@@ -110,7 +110,7 @@ function InternDeatil() {
             <div className="aboutCompany flex justify-start">
               <p className="mt-3 text-xl font-bold text-start">
                 {" "}
-                About {data.company}
+                About {"myORG Ltd"}
               </p>
               <br />
             </div>
@@ -167,7 +167,7 @@ function InternDeatil() {
               <button className="close2" onClick={hide}>
                 <i className="bi-bi-x"></i> close
               </button>
-              <p>Applyion for {data.company}</p>
+              <p>Applyion for {"myORG Ltd"}</p>
               <p className="mt-3 text-sm font-bold text-start mb-3">
                 {data.aboutCompany}
               </p>

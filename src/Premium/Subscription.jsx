@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 // const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 const stripePromise = loadStripe(
-  "pk_test_51QirepCM0GuCD7Ys3aoxz7HXWHVe4puQ3VKg9Qik7BplEaGWrkjOHvqXsxFfBmYIlBseebdqe73ZgKitr96mluiX00Hjbh9yII"
+  process.env.REACT_APP_STRIPE_PUBLIC_KEY
 );
 
 const SUBSCRIPTION_PLANS = {

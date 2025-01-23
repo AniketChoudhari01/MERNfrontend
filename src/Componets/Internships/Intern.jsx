@@ -23,7 +23,7 @@ function Intern() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://internshipbackend-vwja.onrender.com/api/internship`
+          `https://intern-area-backned.onrender.com/api/internship`
         );
         setInternData(response.data);
         console.log(response.data);
@@ -159,7 +159,7 @@ function Intern() {
                   </div>
                   <div className="info">
                     <p className="text-sm text-slate-300 font-bold">
-                      {data.company}
+                      {"myORG"}
                     </p>
                     <p className=" mt-2">{data.location}</p>
                   </div>

@@ -13,7 +13,7 @@ export const ForgotPasswordForm = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:3001/api/forgot-password", {
+      const response = await fetch("https://intern-area-backned.onrender.com/api/forgot-password", {
         method: "POST",
         crossDomain: true,
         headers: {

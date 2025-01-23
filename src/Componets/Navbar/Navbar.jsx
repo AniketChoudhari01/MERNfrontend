@@ -101,7 +101,7 @@ function Navbar() {
       }
 
       // Call the API to check if the user is existing or new
-      const response = await fetch("http://localhost:3001/api/google-signin", {
+      const response = await fetch("https://intern-area-backned.onrender.com/api/google-signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -151,7 +151,7 @@ function Navbar() {
       return;
     }
     try {
-      const response = await fetch("http://localhost:3001/api/login", {
+      const response = await fetch("https://intern-area-backned.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -438,21 +438,21 @@ function Navbar() {
               <h5 id="state" className="mb-4 text-center">
                 <span
                   id="Sign-in"
-                  style={{ cursor: "pointer" }}
+                  // style={{ cursor: "pointer" }}
                   className={`auth-tab ${isStudent ? "active" : ""}`}
                   onClick={setFalseForStudent}
                 >
-                  Student
+                  Student /  Employee andT&P
                 </span>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                <span
+                {/* <span
                   id="join-in"
                   style={{ cursor: "pointer" }}
                   className={`auth-tab ${!isStudent ? "active" : ""}`}
                   onClick={setTrueForStudent}
                 >
                   Employee andT&P
-                </span>
+                </span> */}
               </h5>
 
               {/* Form for Student */}
@@ -559,72 +559,72 @@ function Navbar() {
                   </div>
                 </div>
               ) : (
-                <div>hello</div>
+                // <div>hello</div>
                 /* Form for Employee and T&P */
-                // <div className="flex bg-white rounded-lg justify-center overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
-                //   <div className="w-full p-8 lg:w-6/7">
-                //     <form /* onSubmit={handleManualLogin} */>
-                //       <div className="mt-4">
-                //         <label className="block text-gray-700 text-sm font-bold mb-2">
-                //           Email
-                //         </label>
-                //         <input
-                //           className="text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full"
-                //           value={email}
-                //           onChange={(e) => setEmail(e.target.value)}
-                //           placeholder="john@example.com"
-                //         />
-                //       </div>
-                //       <div className="mt-4">
-                //         <div className="flex justify-between">
-                //           <label className="block text-gray-700 text-sm font-bold mb-2">
-                //             Password
-                //           </label>
-                //           <button
-                //             type="button"
-                //             onClick={() => navigate("/forgot-password")}
-                //             className="text-blue-500 hover:text-blue-700"
-                //           >
-                //             Forgot Password?
-                //           </button>
-                //         </div>
-                //         <input
-                //           className="text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full"
-                //           placeholder="Must be at least 6 characters"
-                //           value={password}
-                //           onChange={(e) => setPassword(e.target.value)}
-                //         />
-                //       </div>
-                //       <div className="mt-8">
-                //         <button
-                //           type="submit"
-                //           className="bg-blue-500 h-9 text-white font-bold py-2 px-4 w-full rounded hover:bg-blue-600"
-                //         >
-                //           Login
-                //         </button>
-                //       </div>
-                //     </form>
-                //     <div className="mt-4 flex items-center justify-between">
-                //       <p className="text-sm">
-                //         new to internarea? Register(
-                //         <span
-                //           className="text-blue-500 cursor-pointer"
-                //           onClick={() => navigate("/register")}
-                //         >
-                //           Student
-                //         </span>
-                //         /
-                //         <span
-                //           className="text-blue-500 cursor-pointer"
-                //           onClick={() => navigate("/register")}
-                //         >
-                //           company
-                //         </span>
-                //         )
-                //       </p>
-                //     </div>
-                //   </div>
-                // </div>
+                <div className="flex bg-white rounded-lg justify-center overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
+                  <div className="w-full p-8 lg:w-6/7">
+                    <form /* onSubmit={handleManualLogin} */>
+                      <div className="mt-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2">
+                          Email
+                        </label>
+                        <input
+                          className="text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          placeholder="john@example.com"
+                        />
+                      </div>
+                      <div className="mt-4">
+                        <div className="flex justify-between">
+                          <label className="block text-gray-700 text-sm font-bold mb-2">
+                            Password
+                          </label>
+                          <button
+                            type="button"
+                            onClick={() => navigate("/forgot-password")}
+                            className="text-blue-500 hover:text-blue-700"
+                          >
+                            Forgot Password?
+                          </button>
+                        </div>
+                        <input
+                          className="text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full"
+                          placeholder="Must be at least 6 characters"
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                        />
+                      </div>
+                      <div className="mt-8">
+                        <button
+                          type="submit"
+                          className="bg-blue-500 h-9 text-white font-bold py-2 px-4 w-full rounded hover:bg-blue-600"
+                        >
+                          Login
+                        </button>
+                      </div>
+                    </form>
+                    <div className="mt-4 flex items-center justify-between">
+                      <p className="text-sm">
+                        new to internarea? Register(
+                        <span
+                          className="text-blue-500 cursor-pointer"
+                          onClick={() => navigate("/register")}
+                        >
+                          Student
+                        </span>
+                        /
+                        <span
+                          className="text-blue-500 cursor-pointer"
+                          onClick={() => navigate("/register")}
+                        >
+                          company
+                        </span>
+                        )
+                      </p>
+                    </div>
+                  </div>
+                </div>
               )}
             </div>
           </div>

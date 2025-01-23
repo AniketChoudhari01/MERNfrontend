@@ -110,7 +110,7 @@ function JobDetail() {
           <div className="aboutCompany flex justify-start">
             <p className="mt-3 text-xl font-bold text-start">
               {" "}
-              About {data.company}
+              About {"myORG Ltd"}
             </p>
             <br />
           </div>

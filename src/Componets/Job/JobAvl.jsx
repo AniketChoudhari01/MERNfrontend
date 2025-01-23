@@ -13,7 +13,7 @@ function JobAvl() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://internshipbackend-vwja.onrender.com/api/job`
+          `https://intern-area-backned.onrender.com/api/job`
         );
         setJobData(response.data);
       } catch (error) {
@@ -152,7 +152,7 @@ function JobAvl() {
                   </div>
                   <div className="info">
                     <p className="text-sm text-slate-300 font-bold">
-                      {data.company}
+                      {"myORG Ltd"}
                     </p>
                     <p className=" mt-2">{data.location}</p>
                   </div>
