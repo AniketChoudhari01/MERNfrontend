@@ -29,10 +29,9 @@ export const ForgotPasswordForm = () => {
   
       if (response.ok) {
         // Success toast
-        toast.success(data.status || "Password reset email sent!", {
+        toast.success("Password reset email sent!", {
           position: "top-right",
         });
-        navigate("/register"); // Navigate back to register after submission
       } else {
         // Error toast
         toast.error(data.message || "User Not Found", {
@@ -42,6 +41,8 @@ export const ForgotPasswordForm = () => {
           // hideProgressBar: true, // Disables the progress bar
 
         });
+        navigate("/register"); // Navigate back to register after submission
+
       }
     } catch (error) {
       // Network or unexpected error
